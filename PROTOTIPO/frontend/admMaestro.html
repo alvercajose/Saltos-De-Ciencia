@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Profesor</title>
+    <link rel="stylesheet" href="css/admMaestro.css">
+    </head>
+<body>
+    <header class="main-header">
+        <img src="img/UPS.webp" alt="Logo Universidad" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="Index.html">ATRAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header">
+        <h1>Panel del Profesor</h1>
+    </div>
+    <div class="stats-container">
+        <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h2 class="stat-title">Total Estudiantes</h2>
+            <button class="stat-value" onclick="redirectToStudents()">45</button>
+        </div>
+
+        <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <h2 class="stat-title">Preguntas Creadas</h2>
+            <button class="stat-value" onclick="redirectToQuestions()">128</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToQuestions() {
+             //Redirigir a otra página después de cerrar el modal
+             window.location.href = "gpregunta.html"; 
+         }
+         function redirectToStudents() {
+             //Redirigir a otra página después de cerrar el modal
+             window.location.href = "g-estudiantes.html"; 
+         }
+    </script>
+</body>
+</html>

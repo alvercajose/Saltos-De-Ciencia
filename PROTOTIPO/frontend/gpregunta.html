@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Preguntas</title>
+    <link rel="stylesheet" href="css/gpregunta.css">
+</head>
+<body background="img/fondoPuntuacionEstudiantes.jpg">
+    <header class="main-header">
+        <img src="img/UPS.webp" alt="Logo Universidad" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="admMaestro.html">ATRAS</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <h1>Gestión de Preguntas</h1>
+    <button id="btn-new" class="btn-new" onclick="mostrarFormulario()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        Nueva Pregunta
+    </button>
+
+    <div id="formulario">
+        <h2>Nueva Pregunta</h2>
+        <div class="form-group">
+            <label>Pregunta:</label>
+            <input type="text" id="questionText">
+        </div>
+
+        <div class="form-group">
+            <label>Opción 1:</label>
+            <input type="text" id="option1">
+            <input type="checkbox" id="correct1">
+            <label>Correcta</label>
+        </div>
+
+        <div class="form-group">
+            <label>Opción 2:</label>
+            <input type="text" id="option2">
+            <input type="checkbox" id="correct2">
+            <label>Correcta</label>
+        </div>
+
+        <div class="form-group">
+            <label>Opción 3:</label>
+            <input type="text" id="option3">
+            <input type="checkbox" id="correct3">
+            <label>Correcta</label>
+        </div>
+
+        <button onclick="crearPregunta()">Crear Pregunta</button>
+        <div id="error" class="error"></div>
+    </div>
+
+    <div id="listado">
+        <h2>Preguntas Existentes</h2>
+        <div id="questionList"></div>
+    </div>
+    <script src="js/gpregunta.js"></script>
+</body>
+</html>

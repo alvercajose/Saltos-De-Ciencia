@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡SALTOS DE CIENCIAS!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/advjuego.css"> <!-- Enlace al archivo CSS -->
+    <script src="/socket.io/socket.io.js"></script> <!-- Incluir Socket.IO -->
+</head>
+    <body background="img/3.jpg">
+        <header class="main-header">
+            <img src="img/UPS.webp" alt="123" class="logo">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="Video.html">VIDEO</a></li>
+                    <li><a href="Tabla.html">LEADERBOARD</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main class="game-container">
+            <!--<h1>¡SALTOS DE CIENCIAS!</h1>-->
+            <div id="gameContainer">
+                <div id="lives">❤️❤️❤️</div>
+                <div id="progress">Pregunta 1 de 5</div>
+                <div id="score">Puntos: 0</div>
+                <div id="questionContainer">
+                    <!--se agregan las preguntas desde la base de datos-->
+                </div>
+                <div id="feedback" class="feedback"></div>
+
+                <img id="boy" src="img/niño.png" alt="Niño">
+                <img id="cat" src="img/gat.webp" alt="Gato">
+                <div id="stones">
+                    <div class="stone"></div>
+                    <div class="stone"></div>
+                    <div class="stone"></div>
+                    <div class="stone"></div>
+                </div>
+                <h1 id="saltos-de-ciencia">¡Saltos de Ciencia!</h1>
+                <button id="moveButton" onclick="saltar()">Mover</button>
+                <button id="startButton" onclick="startGame()">Iniciar el Juego</button>
+            </div>
+
+            <div id="victoryModal">
+                <div id="victoryModalContent">
+                    <h2>¡Felicidades! Has ganado el juego🥳✨.</h2>
+                    <p>¿Quieres jugar otra vez o salir?</p>
+                    <button id="playAgainButton" onclick="resetGame()">Jugar de nuevo</button>
+                    <button id="exitButton" onclick="exitGame()">Salir</button>
+                </div>
+            </div>
+
+            <div id="retryModal">
+                <div id="retryModalContent">
+                    <h2>¡Has perdido todas tus vidas!💔</h2>
+                    <p>¿Quieres volver a intentarlo?</p>
+                    <button id="retryButton" onclick="resetGame()">Intentar de nuevo</button>
+                </div>
+            </div>
+            <audio id="backgroundMusic" src="audio/angry-birds-videojuegos-.mp3" loop></audio>
+            <script src="js/advjuego.js"></script> <!-- Enlace al archivo JavaScript -->
+        </main>    
+    </body>
+</html>
